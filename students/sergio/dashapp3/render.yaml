@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: dash-suffolk-app
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:server
+    plan: free
